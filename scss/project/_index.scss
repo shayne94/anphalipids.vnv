@@ -21,18 +21,63 @@
             margin-bottom: 50px;
         }
     }
-    &__txt {
-        text-align: justify;
-        text-align-last: left;
-        padding: 0 100px;
+    &__box {
+        @include flex-jbetween;
         @media (max-width: 1200px) {
             padding: 0 50px;
         }
         @media (max-width: 768px) {
+            display: block;
             padding: 0 25px;
         }
         @media (max-width: 480px) {
             padding: 0 10px;
+        }
+    }
+    &__img {
+        position: relative;
+        width: 40%;
+        @media (max-width: 768px) {
+            float: left;
+            margin-right: 25px;
+        }
+        @media (max-width: 480px) {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        &::before {
+            border: solid 2px $color2;
+            content: "";
+            height: calc(100% - 50px);
+            margin: 25px;
+            position: absolute;
+            width: calc(100% - 50px);
+            z-index: 1;
+            @media (max-width: 768px) {
+                height: calc(100% - 20px);
+                margin: 10px;
+                width: calc(100% - 20px);
+            }
+            @media (max-width: 480px) {
+                height: calc(100% - 24px);
+                width: calc(100% - 24px);
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+    &__txt {
+        margin-left: 50px;
+        text-align: justify;
+        text-align-last: left;
+        width: 60%;
+        @media (max-width: 768px) {
+            margin-left: 0;
+            width: 100%;
+        }
+        @media (max-width: 480px) {
+            
         }
     }
 }
@@ -42,10 +87,10 @@
         padding: 100px 50px 90px;
     }
     @media (max-width: 768px) {
-        padding: 70px 25px 60px;
+        padding: 80px 25px;
     }
     @media (max-width: 480px) {
-        padding: 50px 10px 40px;
+        padding: 60px 10px 40px;
     }
     &__title {
         font-size: 48px;
@@ -120,16 +165,28 @@
     &__box {
         @include flex-jcenter;
         flex-wrap: wrap;
-        margin: -25px;
+        margin: -12.5px;
+        @media (max-width: 480px) {
+            margin: 0;
+        }
     }
     &__inner {
         @include flex-icenter;
         background-color: $color2;
         cursor: pointer;
         height: 100%;
-        margin: 25px;
+        margin: 12.5px;
         position: relative;
         width: calc(100% / 3 - 150px / 3);
+        @media (max-width: 768px) {
+            width: calc(100% / 2 - 25px);
+        }
+        @media (max-width: 480px) {
+            cursor: default;
+            margin: 0 0 10px;
+            padding: 10px;
+            width: 100%;
+        }
         p {
             font-size: 20px;
             margin: 0 25px;
@@ -139,6 +196,16 @@
             text-align: center;
             width: calc(100% - 50px);
             z-index: 0;
+            @media (max-width: 480px) {
+                margin: 0 10px;
+                width: calc(100% - 24px);
+            }
+        }
+        img {
+            transition: all 0.3s ease;
+            @media (max-width: 480px) {
+                width: 100%;
+            }
         }
         span {
             font-size: 20px;
@@ -162,6 +229,9 @@
             transition: all 0.3s ease;
             width: 100%;
             z-index: 1;
+            @media (max-width: 480px) {
+                display: none;
+             }
         }
         &::after {
             border: solid 2px $color2;
@@ -174,6 +244,13 @@
             transition: all 0.3s ease;
             width: calc(100% - 53px);
             z-index: 1;
+            @media (max-width: 480px) {
+                border: solid 2px $color3;
+                height: calc(100% - 22px);
+                margin: 0;
+                opacity: 1; 
+                width: calc(100% - 22px);
+             }
         }
         &:hover {
             &::before,
@@ -182,6 +259,15 @@
             }
             span {
                 opacity: 1;
+                @media (max-width: 480px) {
+                 opacity: 0;   
+                }
+            }
+            img {
+                transform: scale(1.1);
+                @media (max-width: 480px) {
+                 transform: scale(1);   
+                }
             }
         }
     }
@@ -192,6 +278,11 @@
         overflow: hidden;
         img {
             width: 100%;
+        }
+        @media (max-width: 480px) {
+            border: none;
+            margin: 10px;
+            pointer-events: none;
         }
     }
     &__name {
@@ -208,10 +299,10 @@
 .gallery {
     padding: 100px 0 90px;
     @media (max-width: 768px) {
-        padding: 70px 25px 60px;
+        padding: 0 0 70px;
     }
     @media (max-width: 480px) {
-        padding: 50px 10px 40px;
+        padding: 0 0 40px;
     }
     &__title {
         font-size: 48px;
@@ -219,17 +310,26 @@
         margin-bottom: 100px;
         text-align: center;
         text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin-bottom: 70px;
+        }
         @media (max-width: 480px) {
             font-size: 36px;
+            margin-bottom: 50px;
         }
     }
     &__cont {
         margin-top: 50px;
+        @media (max-width: 1200px) {
+            padding: 0 50px;
+        }
         @media (max-width: 768px) {
             margin-top: 70px;
+            padding: 0 25px;
         }
         @media (max-width: 480px) {
             margin-top: 50px;
+            padding: 0 10px;
         }
     }
     &__subtitle {
@@ -274,21 +374,33 @@
             margin-bottom: 25px;
         }
         @media (max-width: 480px) {
-            font-size: 20px;
+            font-size: 28px;
             margin-bottom: 0;
             padding: 15px;
         }
     }
     &__box {
         @include flex-jcenter;
-        margin: -25px;
+        margin: -12.5px;
+        @media (max-width: 480px) {
+            flex-wrap: wrap;
+            margin: 25px 0 0;
+        }
     }
     &__item {
-        margin: 25px;
+        margin: 12.5px;
         width: calc(100% / 5 - 200px / 5);
         overflow: hidden;
         position: relative;
-        background-color: red;
+        background-color: $color2;
+        @media (max-width: 768px) {
+            width: calc(100% / 5 - 25px);
+        }
+        @media (max-width: 480px) {
+            margin: 0 0 10px;
+            pointer-events: none;
+            width: 100%;
+        }
         &::before {
             content: "";
             display: block;
@@ -301,8 +413,12 @@
             left: 0;
             right: 0;
             top: 0;
+            @media (max-width: 480px) {
+                cursor: default;
+            }
             img {
                 height: 100%;
+                transition: all 0.3s ease;
                 width: auto;
             }
             &::before {
@@ -315,6 +431,9 @@
                 transition: all 0.3s ease;
                 width: 100%;
                 z-index: 1;
+                @media (max-width: 480px) {
+                    display: none;
+                }
             }
             &::after {
                 border: solid 1px $color2;
@@ -326,11 +445,24 @@
                 transition: all 0.3s ease;
                 width: calc(100% - 20px);
                 z-index: 1;
+                @media (max-width: 480px) {
+                    border: solid 2px $color2;
+                    opacity: 1;   
+                   }
             }
             &:hover {
                 &::before,
                 &::after {
                     opacity: 0.75;
+                    @media (max-width: 480px) {
+                        opacity: 0;   
+                       }
+                }
+                img {
+                    transform: scale(1.1);
+                    @media (max-width: 480px) {
+                        transform: scale(1);   
+                       }
                 }
             }
         }
@@ -340,10 +472,10 @@
     background: url(../../assets/images/index/bg04.png) repeat;
     padding: 100px 0 40px;
     @media (max-width: 768px) {
-        padding: 70px 0 60px;
+        padding: 80px 0 20px;
     }
     @media (max-width: 480px) {
-        padding: 50px 0;
+        padding: 60px 0 50px;
     }
     &__title {
         font-size: 48px;
@@ -375,9 +507,31 @@
     &__box {
         @include flex-jbetween;
         margin-bottom: 50px;
+        position: relative;
+        @media (max-width: 480px) {
+           flex-direction: column;
+           margin-bottom: 0;
+           margin-top: 50px;
+        }
+    }
+    &__inner {
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+        @media (max-width: 480px) {
+           margin-bottom: 10px;
+        }
     }
     &__shop {
         @include flex-icenter;
+        @media (max-width: 480px) {
+           margin-bottom: 10px;
+        }
+        img {
+            @media (max-width: 480px) {
+                display: none;
+            }
+        }
         span {
             background-color: $color2;
             border-radius: 0 30px 30px 0;
@@ -388,11 +542,18 @@
             letter-spacing: 1px;
             margin-left: -10px;
             padding: 5px 25px;
+            @media (max-width: 768px) {
+                border-radius: 30px;
+                margin-left: 0;
+            }
         }
     }
     &__name, &__address, &__phone, &__fb {
         margin-left: 60px;
         margin-top: 5px;
+        @media (max-width: 480px) {
+           margin-left: 0;
+        }
         a {
             color: $color2;
             text-decoration: none;
@@ -406,9 +567,20 @@
     &__img {
         border: solid 2px $color2;
         padding: 10px;
+        overflow: hidden;
         width: 30%;
+        @media (max-width: 768px) {
+            width: 50%;
+        }
+        @media (max-width: 480px) {
+           width: 100%;
+        }
         img {
             width: 100%;
+            @media (max-width: 768px) {
+                height: 100%;
+                object-fit: cover;
+            }
         }
     }
 }

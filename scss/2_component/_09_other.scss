@@ -7,20 +7,18 @@
 		display: none;
 	}
 }
-
 @media (min-width: 769px) {
 	.sp {
 		display: none;
 	}
 }
-
-@media (max-width: 1200px) {
-	.only-pc {
-		display: none;
+@media (max-width: 480px) {
+	.pc-480 {
+		display: none !important;
 	}
 }
-@media (min-width: 1200px) {
-	.pc-1200 {
+@media (min-width: 481px) {
+	.sp-480 {
 		display: none;
 	}
 }
