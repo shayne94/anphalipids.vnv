@@ -608,7 +608,7 @@ h1 img {
 }
 @media (max-width: 1200px) {
   .product {
-    padding: 100px 50px 90px;
+    padding: 100px 50px 110px;
   }
 }
 @media (max-width: 768px) {
@@ -618,7 +618,7 @@ h1 img {
 }
 @media (max-width: 480px) {
   .product {
-    padding: 60px 10px 40px;
+    padding: 60px 10px 50px;
   }
 }
 .product__title {
@@ -711,7 +711,7 @@ h1 img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: -12.5px;
+  margin: 0 -12.5px;
 }
 @media (max-width: 480px) {
   .product__box {
@@ -726,7 +726,7 @@ h1 img {
   height: 100%;
   margin: 12.5px;
   position: relative;
-  width: calc(33.3333333333% - 50px);
+  width: calc(33.3333333333% - 25px);
 }
 @media (max-width: 768px) {
   .product__inner {
@@ -863,14 +863,19 @@ h1 img {
 .gallery {
   padding: 100px 0 90px;
 }
+@media (max-width: 1200px) {
+  .gallery {
+    padding: 0 50px 100px;
+  }
+}
 @media (max-width: 768px) {
   .gallery {
-    padding: 0 0 70px;
+    padding: 0 25px 57.5px;
   }
 }
 @media (max-width: 480px) {
   .gallery {
-    padding: 0 0 40px;
+    padding: 0 10px 37.5px;
   }
 }
 .gallery__title {
@@ -892,31 +897,14 @@ h1 img {
   }
 }
 .gallery__cont {
-  margin-top: 50px;
-}
-@media (max-width: 1200px) {
-  .gallery__cont {
-    padding: 0 50px;
-  }
-}
-@media (max-width: 768px) {
-  .gallery__cont {
-    margin-top: 70px;
-    padding: 0 25px;
-  }
-}
-@media (max-width: 480px) {
-  .gallery__cont {
-    margin-top: 50px;
-    padding: 0 10px;
-  }
+  margin-top: 37.5px;
 }
 .gallery__subtitle {
   display: inline-block;
   font-family: "Playball", cursive;
   font-size: 32px;
   letter-spacing: 1px;
-  margin-bottom: 50px;
+  margin-bottom: 37.5px;
   padding: 25px;
   position: relative;
 }
@@ -969,7 +957,7 @@ h1 img {
 .gallery__box {
   display: flex;
   justify-content: center;
-  margin: -12.5px;
+  margin: 0 -12.5px;
 }
 @media (max-width: 480px) {
   .gallery__box {
@@ -979,7 +967,7 @@ h1 img {
 }
 .gallery__item {
   margin: 12.5px;
-  width: calc(20% - 40px);
+  width: calc(20% - 20px);
   overflow: hidden;
   position: relative;
   background-color: #fff;

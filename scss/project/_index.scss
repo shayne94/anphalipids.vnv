@@ -84,13 +84,13 @@
 .product {
     padding-top: 100px;
     @media (max-width: 1200px) {
-        padding: 100px 50px 90px;
+        padding: 100px 50px 110px;
     }
     @media (max-width: 768px) {
         padding: 80px 25px;
     }
     @media (max-width: 480px) {
-        padding: 60px 10px 40px;
+        padding: 60px 10px 50px;
     }
     &__title {
         font-size: 48px;
@@ -165,7 +165,7 @@
     &__box {
         @include flex-jcenter;
         flex-wrap: wrap;
-        margin: -12.5px;
+        margin: 0 -12.5px;
         @media (max-width: 480px) {
             margin: 0;
         }
@@ -177,7 +177,7 @@
         height: 100%;
         margin: 12.5px;
         position: relative;
-        width: calc(100% / 3 - 150px / 3);
+        width: calc(100% / 3 - 75px / 3);
         @media (max-width: 768px) {
             width: calc(100% / 2 - 25px);
         }
@@ -298,11 +298,14 @@
 }
 .gallery {
     padding: 100px 0 90px;
+    @media (max-width: 1200px) {
+        padding: 0 50px 100px;
+    }
     @media (max-width: 768px) {
-        padding: 0 0 70px;
+        padding: 0 25px 57.5px;
     }
     @media (max-width: 480px) {
-        padding: 0 0 40px;
+        padding: 0 10px 37.5px;
     }
     &__title {
         font-size: 48px;
@@ -319,25 +322,14 @@
         }
     }
     &__cont {
-        margin-top: 50px;
-        @media (max-width: 1200px) {
-            padding: 0 50px;
-        }
-        @media (max-width: 768px) {
-            margin-top: 70px;
-            padding: 0 25px;
-        }
-        @media (max-width: 480px) {
-            margin-top: 50px;
-            padding: 0 10px;
-        }
+        margin-top: 37.5px;
     }
     &__subtitle {
         display: inline-block;
         font-family: "Playball", cursive;
         font-size: 32px;
         letter-spacing: 1px;
-        margin-bottom: 50px;
+        margin-bottom: 37.5px;
         padding: 25px;
         position: relative;
         &::before {
@@ -381,7 +373,7 @@
     }
     &__box {
         @include flex-jcenter;
-        margin: -12.5px;
+        margin: 0 -12.5px;
         @media (max-width: 480px) {
             flex-wrap: wrap;
             margin: 25px 0 0;
@@ -389,7 +381,7 @@
     }
     &__item {
         margin: 12.5px;
-        width: calc(100% / 5 - 200px / 5);
+        width: calc(100% / 5 - 100px / 5);
         overflow: hidden;
         position: relative;
         background-color: $color2;
