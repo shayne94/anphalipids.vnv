@@ -388,7 +388,7 @@ h1 img {
 }
 @media (min-width: 481px) {
   .sp-480 {
-    display: none;
+    display: none !important;
   }
 }
 .html5-prev-inside .mh-icon-left {
